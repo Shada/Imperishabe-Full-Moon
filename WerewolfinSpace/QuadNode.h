@@ -5,34 +5,34 @@
 class Terrain;
 class Player;
 class QuadNode : 
-	public AABB
+    public AABB
 {
 private:
 
-	D3DXPLANE* lastFailed;
-	vector<QuadNode> nodes;
-	vector<Object3D*> objects;
+    D3DXPLANE* lastFailed;
+    vector<QuadNode> nodes;
+    vector<Object3D*> objects;
 
-	D3DXVECTOR2 area;
-	D3DXVECTOR2 pos;
-	Camera* camera;
-	Terrain* terrain;
+    D3DXVECTOR2 area;
+    D3DXVECTOR2 pos;
+    Camera* camera;
+    Terrain* terrain;
 
-	int subTerrainIndex;
-	bool frustumAABBintersect();
-	bool planeAABBIntersect(D3DXPLANE *plane);
+    int subTerrainIndex;
+    bool frustumAABBintersect();
+    bool planeAABBIntersect(D3DXPLANE *plane);
 public:
 
-	QuadNode(int subLevels, D3DXVECTOR2 area, D3DXVECTOR2 pos, Camera* camera);
-	~QuadNode();
+    QuadNode(int subLevels, D3DXVECTOR2 area, D3DXVECTOR2 pos, Camera* camera);
+    ~QuadNode();
 
-	bool hitTest(Object3D* object);
-	bool removeObject(Object3D* object);
-	void CheckCollision(Player* player);
+    bool hitTest(Object3D* object);
+    bool removeObject(Object3D* object);
+    void CheckCollision(Player* player);
 
-	void DrawTerrain(DxHandler* h);
-	void Draw(DxHandler* h, D3DXVECTOR3 plPos);
+    void DrawTerrain(DxHandler* h);
+    void Draw(DxHandler* h, D3DXVECTOR3 plPos);
 
-	void addObject(Object3D* object);
-	void addTerrain(Terrain* t, ID3D10Device *device);
+    void addObject(Object3D* object);
+    void addTerrain(Terrain* t, ID3D10Device *device);
 };

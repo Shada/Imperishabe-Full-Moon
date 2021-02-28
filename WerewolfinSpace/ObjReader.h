@@ -11,28 +11,28 @@
 class ObjReader
 {
 private:
-	int groupIndex;
+    int groupIndex;
 
-	vector<D3DXVECTOR3*> *vertices;
-	vector<D3DXVECTOR3*> *normals;
-	vector<D3DXVECTOR2*> *texels;
+    vector<D3DXVECTOR3*> *vertices;
+    vector<D3DXVECTOR3*> *normals;
+    vector<D3DXVECTOR2*> *texels;
 
-	vector<PolygonGroup> *groups;
-	MtlReader			 *mtlreader;
+    vector<PolygonGroup> *groups;
+    MtlReader             *mtlreader;
 
-	ifstream			 *datafile;
+    ifstream             *datafile;
 
-	void reset();
+    void reset();
 
-	void readVertex();
-	void readFace();
-	void readMtl();
-	void readUse();
-	void readGroup();
+    void readVertex();
+    void readFace();
+    void readMtl();
+    void readUse();
+    void readGroup();
 
 public:
-	ObjReader();
-	~ObjReader();
-	
-	void readData( string filename, Model* model );
+    ObjReader();
+    ~ObjReader();
+    
+    void readData( string filename, Model* model );
 };

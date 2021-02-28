@@ -8,15 +8,15 @@
 class MtlReader
 {
 private:
-	vector<Material*> materials;
+    vector<Material*> materials;
 
 public:
-	MtlReader();
-	~MtlReader();
+    MtlReader();
+    ~MtlReader();
 
-	void readFile(string filename);
+    void readFile(string filename);
 
-	Material *getMaterial(string name);
+    Material *getMaterial(string name);
 
-	void reset();
+    void reset();
 };

@@ -4,16 +4,16 @@
 class GameCredits
 {
 private:
-	ID3DX10Font* font;
-	ID3DX10Sprite* sprite;
+    ID3DX10Font* font;
+    ID3DX10Sprite* sprite;
 
-	RECT r;
+    RECT r;
 
-	string names[4];
+    string names[4];
 public:
 
-	GameCredits(ID3DX10Font* font,ID3DX10Sprite* sprite);
-	~GameCredits();
+    GameCredits(ID3DX10Font* font,ID3DX10Sprite* sprite);
+    ~GameCredits();
 
-	void Draw(DxHandler* h);
+    void Draw(DxHandler* h);
 };

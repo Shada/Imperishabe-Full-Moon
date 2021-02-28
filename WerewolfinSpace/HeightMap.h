@@ -4,16 +4,16 @@
 class HeightMap
 {
 private:
-	vector<float> heights;
+    vector<float> heights;
 
-	void boxFilter(int width, int height);
-	float sampleBoxFilter(int width, int height, int i, int j);
+    void boxFilter(int width, int height);
+    float sampleBoxFilter(int width, int height, int i, int j);
 public:
 
-	HeightMap();
-	~HeightMap();
+    HeightMap();
+    ~HeightMap();
 
-	void loadRaw(int width, int height, const string& filename, float heightScale, float heightOffset);
-	
-	vector<float> getHeights() { return heights; }
+    void loadRaw(int width, int height, const string& filename, float heightScale, float heightOffset);
+    
+    vector<float> getHeights() { return heights; }
 };

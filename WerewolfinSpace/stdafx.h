@@ -12,29 +12,29 @@ using namespace std;
 
 struct LineVertex
 {
-	D3DXVECTOR3 pos;
-	D3DXVECTOR3 normal;
-	D3DXVECTOR2 texCoord;
-	LineVertex(D3DXVECTOR3 pos, D3DXVECTOR3 normal, D3DXVECTOR2 texCoord)
-	{
-		this->normal = normal;
-		this->pos = pos;
-		this->texCoord = texCoord;
-	}
-	LineVertex()
-	{
-	}
+    D3DXVECTOR3 pos;
+    D3DXVECTOR3 normal;
+    D3DXVECTOR2 texCoord;
+    LineVertex(D3DXVECTOR3 pos, D3DXVECTOR3 normal, D3DXVECTOR2 texCoord)
+    {
+        this->normal = normal;
+        this->pos = pos;
+        this->texCoord = texCoord;
+    }
+    LineVertex()
+    {
+    }
 };
 struct SpriteVertex
 {
 
-	D3DXVECTOR3 anchor;
-	D3DXVECTOR2 dimensions;
-	SpriteVertex(D3DXVECTOR3 anchor,D3DXVECTOR2 dimensions)
-	{
-		this->anchor = anchor;
-		this->dimensions = dimensions;
-	}
+    D3DXVECTOR3 anchor;
+    D3DXVECTOR2 dimensions;
+    SpriteVertex(D3DXVECTOR3 anchor,D3DXVECTOR2 dimensions)
+    {
+        this->anchor = anchor;
+        this->dimensions = dimensions;
+    }
 };
 
 #define TREE_VIEWDISTANCE (800)

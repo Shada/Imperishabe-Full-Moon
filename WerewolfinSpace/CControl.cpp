@@ -2,20 +2,20 @@
 
 CControl::CControl(char command)
 {
-	this->command = command;
-	defaultBind = command;
+    this->command = command;
+    defaultBind = command;
 }
 
 void CControl::set(char command)
 {
-	if(checkValidCommand(command))
-		this->command = command;
+    if(checkValidCommand(command))
+        this->command = command;
 }
 
 bool CControl::checkValidCommand(char command)
 {
-	//check if valid
-	return true;
+    //check if valid
+    return true;
 }
 
 CControl::~CControl()

@@ -3,13 +3,13 @@
 
 class Level;
 class CheckPoint :
-	public PowerUp
+    public PowerUp
 {
 private:
 
-	void behaviour(Player *player);
+    void behaviour(Player *player);
 public:
 
-	CheckPoint(D3DXVECTOR3 position, float scale, vector<Model*> model, ID3D10EffectTechnique* tech, Level *lvl, D3DXVECTOR3 rotation);
-	~CheckPoint();
+    CheckPoint(D3DXVECTOR3 position, float scale, vector<Model*> model, ID3D10EffectTechnique* tech, Level *lvl, D3DXVECTOR3 rotation);
+    ~CheckPoint();
 };

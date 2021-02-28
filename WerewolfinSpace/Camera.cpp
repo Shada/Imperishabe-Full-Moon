@@ -2,25 +2,25 @@
 
 Camera::Camera()
 {
-	vEyePt		= D3DXVECTOR3	( 0,  10, -20 );
-	vLookAtPt	= D3DXVECTOR3	( 0, 0, 0 );
-	vUp			= D3DXVECTOR3	( 0, 1, 0 );
-	vDistance	= D3DXVECTOR3	( 0, -7, 15 );
-	vDesiredPt	= D3DXVECTOR3	( 0,  10, -20 );
+    vEyePt        = D3DXVECTOR3    ( 0,  10, -20 );
+    vLookAtPt    = D3DXVECTOR3    ( 0, 0, 0 );
+    vUp            = D3DXVECTOR3    ( 0, 1, 0 );
+    vDistance    = D3DXVECTOR3    ( 0, -7, 15 );
+    vDesiredPt    = D3DXVECTOR3    ( 0,  10, -20 );
 
-	mView		= new D3DXMATRIX();
-	mProj		= new D3DXMATRIX();
-	D3DXMatrixLookAtLH( mView, &vEyePt, &vLookAtPt, &vUp );
-	D3DXMatrixPerspectiveLH(mProj, (float)D3DX_PI * .9f, (float)((float)SCREENWIDTH / (float)_SCREENHEIGHT), 1.0f, 3000.0f);
-	buildViewFrustum();
+    mView        = new D3DXMATRIX();
+    mProj        = new D3DXMATRIX();
+    D3DXMatrixLookAtLH( mView, &vEyePt, &vLookAtPt, &vUp );
+    D3DXMatrixPerspectiveLH(mProj, (float)D3DX_PI * .9f, (float)((float)SCREENWIDTH / (float)_SCREENHEIGHT), 1.0f, 3000.0f);
+    buildViewFrustum();
 }
 
 void Camera::buildViewFrustum()
 {
-	D3DXMATRIX viewProj = *mView * *mProj;
+    D3DXMATRIX viewProj = *mView * *mProj;
 
-	// Left plane
-	frustum[0].a = viewProj._14 + viewProj._11;
+    // Left plane
+    frustum[0].a = viewProj._14 + viewProj._11;
     frustum[0].b = viewProj._24 + viewProj._21;
     frustum[0].c = viewProj._34 + viewProj._31;
     frustum[0].d = viewProj._44 + viewProj._41;
@@ -55,71 +55,71 @@ void Camera::buildViewFrustum()
     frustum[5].c = viewProj._34 - viewProj._33;
     frustum[5].d = viewProj._44 - viewProj._43;
 
-	for(int i = 0; i < 6; i++)
-		D3DXPlaneNormalize( &frustum[i], &frustum[i] );
+    for(int i = 0; i < 6; i++)
+        D3DXPlaneNormalize( &frustum[i], &frustum[i] );
 }
 
 void Camera::resetCamera()
 {
-	vLookAtPt	= D3DXVECTOR3	( 0.f, 0.f, 0.f );
-	vUp			= D3DXVECTOR3	( 0.f, 1.f, 0.f );
-	vDistance	= D3DXVECTOR3	( 0.f, -7.f, 15.f );
-	vDesiredPt		= D3DXVECTOR3	( 0.f,  10.f, -20.f );
+    vLookAtPt    = D3DXVECTOR3    ( 0.f, 0.f, 0.f );
+    vUp            = D3DXVECTOR3    ( 0.f, 1.f, 0.f );
+    vDistance    = D3DXVECTOR3    ( 0.f, -7.f, 15.f );
+    vDesiredPt        = D3DXVECTOR3    ( 0.f,  10.f, -20.f );
 }
 
 void Camera::Update( D3DXVECTOR3 pos, double dt ) //player pos
 {
-	pos.y += 5;
-	vDesiredPt += pos - vLookAtPt;
-	vEyePt.x += (float)((vDesiredPt.x - vEyePt.x) / .035f * dt);
-	vEyePt.y += (float)((vDesiredPt.y - vEyePt.y) / .100f * dt);
-	vEyePt.z += (float)((vDesiredPt.z - vEyePt.z) / .035f * dt);
-	if(D3DXVec3Length(&(vEyePt - vDesiredPt)) < .01f)
-		vEyePt = vDesiredPt;
+    pos.y += 5;
+    vDesiredPt += pos - vLookAtPt;
+    vEyePt.x += (float)((vDesiredPt.x - vEyePt.x) / .035f * dt);
+    vEyePt.y += (float)((vDesiredPt.y - vEyePt.y) / .100f * dt);
+    vEyePt.z += (float)((vDesiredPt.z - vEyePt.z) / .035f * dt);
+    if(D3DXVec3Length(&(vEyePt - vDesiredPt)) < .01f)
+        vEyePt = vDesiredPt;
 
-	//vEyePt += (D3DXVec3Length( &(pos - vEyePt) ) < 20) ? temp : temp * .9999f ;
-	vLookAtPt = pos;
-	//create view matrix
-	D3DXMatrixLookAtLH( mView, &vEyePt, &vLookAtPt, &vUp );
-	//create frustum planes;
-	buildViewFrustum();
+    //vEyePt += (D3DXVec3Length( &(pos - vEyePt) ) < 20) ? temp : temp * .9999f ;
+    vLookAtPt = pos;
+    //create view matrix
+    D3DXMatrixLookAtLH( mView, &vEyePt, &vLookAtPt, &vUp );
+    //create frustum planes;
+    buildViewFrustum();
 }
 
 
 void Camera::Rotate(long deltaX)
 {
-	fRotX = deltaX * 0.005f;
+    fRotX = deltaX * 0.005f;
 
-	D3DXMATRIX	mRotX;
+    D3DXMATRIX    mRotX;
 
-	//create rotation matrices
-	D3DXMatrixRotationAxis( &mRotX, &vUp, fRotX ); 
-	
-	D3DXVec3TransformCoord( &vDesiredPt, &vDesiredPt, &mRotX );
-	D3DXVec3TransformCoord( &vLookAtPt, &vLookAtPt, &mRotX );
+    //create rotation matrices
+    D3DXMatrixRotationAxis( &mRotX, &vUp, fRotX ); 
+    
+    D3DXVec3TransformCoord( &vDesiredPt, &vDesiredPt, &mRotX );
+    D3DXVec3TransformCoord( &vLookAtPt, &vLookAtPt, &mRotX );
 }
 
 void Camera::Zoom(long deltaZ)
 {
-	vDistance			= vDesiredPt - vLookAtPt;
-	D3DXVECTOR3 delta	= vDistance * (float)(deltaZ * 0.0005f);
-	float lenght		= D3DXVec3Length( &(vDistance - delta) );
+    vDistance            = vDesiredPt - vLookAtPt;
+    D3DXVECTOR3 delta    = vDistance * (float)(deltaZ * 0.0005f);
+    float lenght        = D3DXVec3Length( &(vDistance - delta) );
 
-	if ( lenght < 50.f && lenght > 10.f)
-		vDesiredPt -= delta;
+    if ( lenght < 50.f && lenght > 10.f)
+        vDesiredPt -= delta;
 }
 
 void Camera::setEyePt(D3DXVECTOR3 pos)
 {
-	 pos.y += 5.f;
-	 vDistance = D3DXVECTOR3( 0.f, -7.f, 15.f );
-	 vEyePt = pos - vDistance;
-	 vLookAtPt = pos;
-	 vDesiredPt = vEyePt;
+     pos.y += 5.f;
+     vDistance = D3DXVECTOR3( 0.f, -7.f, 15.f );
+     vEyePt = pos - vDistance;
+     vLookAtPt = pos;
+     vDesiredPt = vEyePt;
 }
 
 Camera::~Camera()
 {
-	SAFE_DELETE(mView);
-	SAFE_DELETE(mProj);
+    SAFE_DELETE(mView);
+    SAFE_DELETE(mProj);
 }

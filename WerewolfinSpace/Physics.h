@@ -5,5 +5,5 @@ class Physics
 {
 public:
 
-	static void ApplyGravity(float &velocityY, double dt);
+    static void ApplyGravity(float &velocityY, double dt);
 };

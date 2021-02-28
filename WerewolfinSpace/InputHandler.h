@@ -4,31 +4,31 @@
 class InputHandler
 {
 private:
-	
-	HRESULT					initDInput( HINSTANCE hInstance, HWND* hWnd );
+    
+    HRESULT                    initDInput( HINSTANCE hInstance, HWND* hWnd );
 
-	LPDIRECTINPUT8			din;
+    LPDIRECTINPUT8            din;
 
-	LPDIRECTINPUTDEVICE8	dinKeyboard;
-	LPDIRECTINPUTDEVICE8	dinMouse;
+    LPDIRECTINPUTDEVICE8    dinKeyboard;
+    LPDIRECTINPUTDEVICE8    dinMouse;
 
-	char					keyState[256], prevKeyState[256];
+    char                    keyState[256], prevKeyState[256];
 
-	DIMOUSESTATE			mouseState, prevMouseState;
+    DIMOUSESTATE            mouseState, prevMouseState;
 
 public:
-	InputHandler( HINSTANCE hInstance, HWND* hWnd );
-	~InputHandler();
+    InputHandler( HINSTANCE hInstance, HWND* hWnd );
+    ~InputHandler();
 
-	void Update();
-	
-	DIMOUSESTATE *getMouseState() { return &mouseState;}
-	DIMOUSESTATE *getPrevMouseState() { return &prevMouseState;}
-	char* getKeyState()	{ return keyState; }
-	char* getPrevKeyState()	{ return prevKeyState; }
+    void Update();
+    
+    DIMOUSESTATE *getMouseState() { return &mouseState;}
+    DIMOUSESTATE *getPrevMouseState() { return &prevMouseState;}
+    char* getKeyState()    { return keyState; }
+    char* getPrevKeyState()    { return prevKeyState; }
 
-	long getDeltaY()	{ return mouseState.lY; }
-	long getDeltaX()	{ return mouseState.lX; }
-	long getDeltaZ()	{ return mouseState.lZ; }
+    long getDeltaY()    { return mouseState.lY; }
+    long getDeltaX()    { return mouseState.lX; }
+    long getDeltaZ()    { return mouseState.lZ; }
 };
 
