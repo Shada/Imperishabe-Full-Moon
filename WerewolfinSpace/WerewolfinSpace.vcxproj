@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="BaseMenu.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CControl.cpp" />
+    <ClCompile Include="CheckPoint.cpp" />
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="CollisionObject.cpp" />
+    <ClCompile Include="Flash.cpp" />
+    <ClCompile Include="GameCredits.cpp" />
+    <ClCompile Include="DxHandler.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameMenu.cpp" />
+    <ClCompile Include="Goal.cpp" />
+    <ClCompile Include="HeightMap.cpp" />
+    <ClCompile Include="HighScore.cpp" />
+    <ClCompile Include="InGameMenu.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="MovingPlatform.cpp" />
+    <ClCompile Include="MtlReader.cpp" />
+    <ClCompile Include="Object3D.cpp" />
+    <ClCompile Include="ObjReader.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PolygonGroup.cpp" />
+    <ClCompile Include="PowerUp.cpp" />
+    <ClCompile Include="QuadNode.cpp" />
+    <ClCompile Include="Skybox.cpp" />
+    <ClCompile Include="SoundHandler.cpp" />
+    <ClCompile Include="Spike.cpp" />
+    <ClCompile Include="Springboard.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="Water.cpp" />
+    <ClCompile Include="Waterlilly.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="BaseMenu.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CControl.h" />
+    <ClInclude Include="CheckPoint.h" />
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="CollisionObject.h" />
+    <ClInclude Include="Flash.h" />
+    <ClInclude Include="GameCredits.h" />
+    <ClInclude Include="DxHandler.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameMenu.h" />
+    <ClInclude Include="Goal.h" />
+    <ClInclude Include="HeightMap.h" />
+    <ClInclude Include="HighScore.h" />
+    <ClInclude Include="InGameMenu.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="MovingPlatform.h" />
+    <ClInclude Include="MtlReader.h" />
+    <ClInclude Include="Object3D.h" />
+    <ClInclude Include="ObjReader.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PolygonGroup.h" />
+    <ClInclude Include="PowerUp.h" />
+    <ClInclude Include="QuadNode.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Skybox.h" />
+    <ClInclude Include="SoundHandler.h" />
+    <ClInclude Include="Spike.h" />
+    <ClInclude Include="Springboard.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="Water.h" />
+    <ClInclude Include="Waterlilly.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="classdiagram.cd" />
+    <None Include="icon.ico" />
+    <CustomBuild Include="shader.fx">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WerewolfinSpace.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AE4B4044-B929-4E4F-B2C3-821B112E50C8}</ProjectGuid>
+    <RootNamespace>WerewolfinSpace</RootNamespace>
+    <ProjectName>Imperishable Full Moon</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>Lib\x86\;$(LibraryPath)</LibraryPath>
+    <IncludePath>Include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d10.lib;d3dx10.lib;dinput8.lib;dxguid.lib;dsound.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuild>
+      <Command>"$(DXSDK_DIR)Utilities\bin\x86\"fxc.exe  /T fx_4_0 /Fo "%(Filename).fxo" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild>
+      <Outputs>$(TargetDir)Shaders\%(Filename).cps</Outputs>
+    </CustomBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d10.lib;d3dx10.lib;dinput8.lib;dxguid.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

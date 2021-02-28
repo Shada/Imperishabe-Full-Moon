@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{fe4b5f58-ac45-4764-a884-ad295c26432c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\CollisionObjects">
+      <UniqueIdentifier>{68dc49e5-3594-47c0-8430-adcd7fa80322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Handlers">
+      <UniqueIdentifier>{9be9a065-930d-4b25-8b5e-bb7a0d42cc7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{77439a5e-7ec2-4e33-8b30-9aa398e71ddf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileReaders">
+      <UniqueIdentifier>{6d1c0e63-5dde-49af-a8c9-536be2c1434f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Terrain">
+      <UniqueIdentifier>{b7bfc84d-9261-4d6c-ac3e-063584b1463f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{e872a06a-6020-4109-a5d8-33c4d2c464a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Player">
+      <UniqueIdentifier>{67e7ee2f-6aae-46ff-b6cf-2773148dde28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skybox.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Object3D.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionObject.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Springboard.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerUp.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="DxHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuButton.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="HighScore.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCredits.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjReader.cpp">
+      <Filter>FileReaders</Filter>
+    </ClCompile>
+    <ClCompile Include="MtlReader.cpp">
+      <Filter>FileReaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Objects\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightMap.cpp">
+      <Filter>Objects\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="PolygonGroup.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CControl.cpp">
+      <Filter>Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Goal.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Waterlilly.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameMenu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Flash.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckPoint.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingPlatform.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Spike.cpp">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skybox.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Object3D.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionObject.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Springboard.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerUp.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="DxHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuButton.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScore.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCredits.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjReader.h">
+      <Filter>FileReaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MtlReader.h">
+      <Filter>FileReaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Objects\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMap.h">
+      <Filter>Objects\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="PolygonGroup.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CControl.h">
+      <Filter>Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Water.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Waterlilly.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Flash.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckPoint.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingPlatform.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Spike.h">
+      <Filter>Objects\CollisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files\Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="classdiagram.cd" />
+    <None Include="icon.ico">
+      <Filter>Header Files\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WerewolfinSpace.rc">
+      <Filter>Header Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="shader.fx" />
+  </ItemGroup>
+</Project>
