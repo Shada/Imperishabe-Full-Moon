@@ -7,7 +7,7 @@ This game was created as a part of a course at Blekinge Institute of Technology 
 
 The game is taking place on a planet similar to earth, but inhabited by sentient Wolves. 
 
-You are controlling one of the wolves, navigating throu levels by jumping between platforms.
+You are controlling one of the wolves, navigating through levels by jumping between platforms.
 
 Game engine and all assets are created from scratch.
 
