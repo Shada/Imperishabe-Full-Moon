@@ -13,5 +13,4 @@ Game engine and all assets are created from scratch.
 
 ## Demo Video
 
-
-[![Demo Video showing features and gameplay](https://img.youtube.com/vi/egCJmVHDKvo/maxresdefault.jpg)](https://youtu.be/egCJmVHDKvo)
+[![Demo Video](https://i.ytimg.com/vi/egCJmVHDKvo/hqdefault.jpg)](https://youtu.be/egCJmVHDKvo)
